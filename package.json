@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "kafkajs": "^2.2.4",
-    "avsc": "^2.7.1"
+     "avsc": "^5.7.0"
   }
 }
