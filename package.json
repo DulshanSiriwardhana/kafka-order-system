@@ -1,0 +1,17 @@
+{
+  "name": "kafka-order-system",
+  "version": "1.0.0",
+  "description": "Kafka-based order processing system using Node.js and Avro",
+  "main": "index.js",
+  "scripts": {
+    "producer": "cd producer && node producer.js",
+    "consumer": "cd consumer && node consumer.js"
+  },
+  "keywords": ["kafka", "avro", "order-processing"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "avsc": "^2.7.1"
+  }
+}
