@@ -4,9 +4,11 @@ const fs = require("fs");
 
 const schema = avro.parse(JSON.parse(fs.readFileSync("./order.avsc", "utf8")));
 
+const brokers = (process.env.KAFKA_BROKERS || "localhost:9092").split(",").map(b => b.trim());
+
 const kafka = new Kafka({
   clientId: "order-producer",
-  brokers: ["localhost:9092"],
+  brokers: brokers,
 });
 
 const producer = kafka.producer();
